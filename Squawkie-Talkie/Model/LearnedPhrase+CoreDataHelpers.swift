@@ -11,4 +11,16 @@ extension LearnedPhrase {
     
     // convert Core Data types into non-optionals and standard types
     var dateLearnedUnwrapped: Date { dateLearned ?? Date() }
+    
+    // for anywhere an example LearnedPhrase is needed
+    static var example: LearnedPhrase {
+        let controller = DataController(inMemory: true)
+        let viewContext = controller.container.viewContext
+        
+        let learnedPhrase = LearnedPhrase(context: viewContext)
+        learnedPhrase.dateLearned = Date()
+        learnedPhrase.url = URL(fileURLWithPath: "/dev/null")
+        
+        return learnedPhrase
+    }
 }
