@@ -33,7 +33,7 @@ extension Phrase {
         let phrase = Phrase(context: viewContext)
         phrase.active = true
         phrase.text = "Example phrase"
-        phrase.url = URL(fileURLWithPath: "/dev/null")
+        phrase.url = Bundle.main.url(forResource: "Hello", withExtension: "mp3")
         
         return phrase
     }

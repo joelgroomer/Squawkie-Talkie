@@ -11,7 +11,7 @@ extension Parrot {
     
     // convert Core Data types into non-optionals and standard types
     var parrotBreed: String { breed ?? "Parrot" }
-    var parrotImage: URL { image ?? URL(fileURLWithPath: "/dev/null") }
+    var parrotImage: URL { image ?? Bundle.main.url(forResource: "default-parrot-red", withExtension: "png")! }
     var parrotName: String { name ?? "My Birb 💚" }
     
     // convert set of `LearnedPhrase`s to an array
@@ -29,7 +29,7 @@ extension Parrot {
         parrot.breed = "Example breed"
         parrot.gotchaDate = Date()
         parrot.hatchDate = Date()
-        parrot.image = URL(fileURLWithPath: "/dev/null")
+        parrot.image = Bundle.main.url(forResource: "default-parrot-red", withExtension: "png")
         parrot.name = "Example name"
         
         return parrot
