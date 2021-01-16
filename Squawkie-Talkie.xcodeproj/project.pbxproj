@@ -58,16 +58,72 @@
 		5DF9FC8D25B38E110084A456 /* Squawkie-Talkie */ = {
 			isa = PBXGroup;
 			children = (
-				5DF9FC8E25B38E110084A456 /* AppDelegate.swift */,
-				5DF9FC9025B38E110084A456 /* SceneDelegate.swift */,
-				5DF9FC9225B38E110084A456 /* ViewController.swift */,
-				5DF9FC9425B38E110084A456 /* Main.storyboard */,
-				5DF9FC9A25B38E140084A456 /* Assets.xcassets */,
-				5DF9FC9C25B38E140084A456 /* LaunchScreen.storyboard */,
-				5DF9FC9F25B38E140084A456 /* Info.plist */,
-				5DF9FC9725B38E110084A456 /* Squawkie_Talkie.xcdatamodeld */,
+				5DF9FCA725B38E410084A456 /* Model */,
+				5DF9FCA825B38E480084A456 /* Views */,
+				5DF9FCAA25B38E580084A456 /* View Controllers */,
+				5DF9FCA925B38E4F0084A456 /* Controllers */,
+				5DF9FCAC25B38E980084A456 /* Storyboards */,
+				5DF9FCA625B38E2D0084A456 /* Lifecycle */,
+				5DF9FCAB25B38E7C0084A456 /* Resources */,
 			);
 			path = "Squawkie-Talkie";
+			sourceTree = "<group>";
+		};
+		5DF9FCA625B38E2D0084A456 /* Lifecycle */ = {
+			isa = PBXGroup;
+			children = (
+				5DF9FC9F25B38E140084A456 /* Info.plist */,
+				5DF9FC8E25B38E110084A456 /* AppDelegate.swift */,
+				5DF9FC9025B38E110084A456 /* SceneDelegate.swift */,
+			);
+			name = Lifecycle;
+			sourceTree = "<group>";
+		};
+		5DF9FCA725B38E410084A456 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				5DF9FC9725B38E110084A456 /* Squawkie_Talkie.xcdatamodeld */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		5DF9FCA825B38E480084A456 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		5DF9FCA925B38E4F0084A456 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		5DF9FCAA25B38E580084A456 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				5DF9FC9225B38E110084A456 /* ViewController.swift */,
+			);
+			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		5DF9FCAB25B38E7C0084A456 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				5DF9FC9A25B38E140084A456 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		5DF9FCAC25B38E980084A456 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				5DF9FC9C25B38E140084A456 /* LaunchScreen.storyboard */,
+				5DF9FC9425B38E110084A456 /* Main.storyboard */,
+			);
+			path = Storyboards;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

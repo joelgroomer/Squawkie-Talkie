@@ -62,5 +62,9 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
+	<key>NSCameraUsageDescription</key>
+	<string>Add photos of your birds to their profiles</string>
+	<key>NSMicrophoneUsageDescription</key>
+	<string>Record words and phrases to teach your parrots</string>
 </dict>
 </plist>
