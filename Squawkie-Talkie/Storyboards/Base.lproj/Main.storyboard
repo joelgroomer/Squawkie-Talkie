@@ -43,7 +43,7 @@
         <!--Home-->
         <scene sceneID="FOZ-x0-q5c">
             <objects>
-                <viewController id="HaO-8N-QbK" sceneMemberID="viewController">
+                <viewController id="HaO-8N-QbK" customClass="HomeViewController" customModule="Squawkie_Talkie" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="2Yj-qq-Vj9">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -55,7 +55,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Resources / Tips" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vrO-gN-Rec">
-                                <rect key="frame" x="10" y="435" width="134" height="21"/>
+                                <rect key="frame" x="10" y="435" width="394" height="21"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -75,6 +75,7 @@
                         <viewLayoutGuide key="safeArea" id="wTI-mb-jQc"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="wTI-mb-jQc" firstAttribute="trailing" secondItem="vrO-gN-Rec" secondAttribute="trailing" constant="10" id="0DV-D0-35e"/>
                             <constraint firstItem="JD6-tD-oi0" firstAttribute="leading" secondItem="wTI-mb-jQc" secondAttribute="leading" constant="5" id="9Hg-IH-5dh"/>
                             <constraint firstItem="wTI-mb-jQc" firstAttribute="trailing" secondItem="nhy-rR-ml9" secondAttribute="trailing" constant="5" id="DTH-g6-fL5"/>
                             <constraint firstItem="ZQ3-RG-u0U" firstAttribute="top" secondItem="wTI-mb-jQc" secondAttribute="top" constant="15" id="F2i-10-V02"/>
