@@ -1,4 +1,28 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="1" systemVersion="11A491" minimumToolsVersion="Automatic" sourceLanguage="Swift" usedWithCloudKit="false" userDefinedModelVersionIdentifier="">
-    <elements/>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="17511" systemVersion="19H2" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="LearnedPhrase" representedClassName="LearnedPhrase" syncable="YES" codeGenerationType="class">
+        <attribute name="dateLearned" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="url" optional="YES" attributeType="URI"/>
+        <relationship name="parrot" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Parrot" inverseName="phrasesLearned" inverseEntity="Parrot"/>
+        <relationship name="phrase" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Phrase" inverseName="learned" inverseEntity="Phrase"/>
+    </entity>
+    <entity name="Parrot" representedClassName="Parrot" syncable="YES" codeGenerationType="class">
+        <attribute name="breed" optional="YES" attributeType="String"/>
+        <attribute name="gotchaDate" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="hatchDate" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="image" optional="YES" attributeType="URI"/>
+        <attribute name="name" attributeType="String"/>
+        <relationship name="phrasesLearned" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="LearnedPhrase" inverseName="parrot" inverseEntity="LearnedPhrase"/>
+    </entity>
+    <entity name="Phrase" representedClassName="Phrase" syncable="YES" codeGenerationType="class">
+        <attribute name="active" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="text" attributeType="String"/>
+        <attribute name="url" attributeType="URI"/>
+        <relationship name="learned" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="LearnedPhrase" inverseName="phrase" inverseEntity="LearnedPhrase"/>
+    </entity>
+    <elements>
+        <element name="Phrase" positionX="-63" positionY="-18" width="128" height="103"/>
+        <element name="LearnedPhrase" positionX="-54" positionY="-9" width="128" height="103"/>
+        <element name="Parrot" positionX="-36" positionY="9" width="128" height="133"/>
+    </elements>
 </model>
