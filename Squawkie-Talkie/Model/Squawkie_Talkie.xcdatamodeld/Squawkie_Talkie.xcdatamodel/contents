@@ -15,9 +15,9 @@
         <relationship name="phrasesLearned" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="LearnedPhrase" inverseName="parrot" inverseEntity="LearnedPhrase"/>
     </entity>
     <entity name="Phrase" representedClassName="Phrase" syncable="YES" codeGenerationType="class">
-        <attribute name="active" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
-        <attribute name="text" optional="YES" attributeType="String"/>
-        <attribute name="url" optional="YES" attributeType="URI"/>
+        <attribute name="active" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="text" attributeType="String"/>
+        <attribute name="url" attributeType="URI"/>
         <relationship name="learned" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="LearnedPhrase" inverseName="phrase" inverseEntity="LearnedPhrase"/>
     </entity>
     <elements>
