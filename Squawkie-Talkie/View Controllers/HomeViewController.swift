@@ -22,11 +22,13 @@ class HomeViewController: UIViewController {
         tipsTableView.delegate = self
     }
     
+
 //     MARK: - Navigation
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
     }
+
 }
 extension HomeViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
