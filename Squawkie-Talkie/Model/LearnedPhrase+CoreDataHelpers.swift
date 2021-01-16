@@ -19,7 +19,7 @@ extension LearnedPhrase {
         
         let learnedPhrase = LearnedPhrase(context: viewContext)
         learnedPhrase.dateLearned = Date()
-        learnedPhrase.url = URL(fileURLWithPath: "/dev/null")
+        learnedPhrase.url = Bundle.main.url(forResource: "ringneck-walk", withExtension: "mp4")
         
         return learnedPhrase
     }
