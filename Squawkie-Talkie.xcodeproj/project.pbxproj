@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5DB6082525B3C411005CFEF7 /* Phrases.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5DB6082425B3C411005CFEF7 /* Phrases.storyboard */; };
 		5DF9FC8F25B38E110084A456 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DF9FC8E25B38E110084A456 /* AppDelegate.swift */; };
 		5DF9FC9125B38E110084A456 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DF9FC9025B38E110084A456 /* SceneDelegate.swift */; };
 		5DF9FC9325B38E110084A456 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DF9FC9225B38E110084A456 /* ViewController.swift */; };
@@ -23,6 +24,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5DB6082425B3C411005CFEF7 /* Phrases.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Phrases.storyboard; sourceTree = "<group>"; };
 		5DF9FC8B25B38E110084A456 /* Squawkie-Talkie.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Squawkie-Talkie.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5DF9FC8E25B38E110084A456 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5DF9FC9025B38E110084A456 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -132,7 +134,8 @@
 			isa = PBXGroup;
 			children = (
 				5DF9FC9C25B38E140084A456 /* LaunchScreen.storyboard */,
-				D7D9086B25B3C6460086CADA /* Main.storyboard */,
+				5DF9FC9425B38E110084A456 /* Main.storyboard */,
+				5DB6082425B3C411005CFEF7 /* Phrases.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -220,6 +223,8 @@
 				D7D9086C25B3C6460086CADA /* Main.storyboard in Resources */,
 				5DF9FC9E25B38E140084A456 /* LaunchScreen.storyboard in Resources */,
 				5DF9FC9B25B38E140084A456 /* Assets.xcassets in Resources */,
+				5DF9FC9625B38E110084A456 /* Main.storyboard in Resources */,
+				5DB6082525B3C411005CFEF7 /* Phrases.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
