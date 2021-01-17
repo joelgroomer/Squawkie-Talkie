@@ -83,16 +83,16 @@
             </objects>
             <point key="canvasLocation" x="235" y="1008"/>
         </scene>
-        <!--View Controller-->
+        <!--Record Sound View Controller-->
         <scene sceneID="fXW-fy-DII">
             <objects>
-                <viewController id="WzJ-xC-Olc" sceneMemberID="viewController">
+                <viewController id="WzJ-xC-Olc" customClass="RecordSoundViewController" customModule="Squawkie_Talkie" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="2YE-xX-jaO">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bsl-GZ-yLC">
-                                <rect key="frame" x="107" y="188" width="200" height="60"/>
+                                <rect key="frame" x="107" y="238" width="200" height="60"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="200" id="5RX-6k-9Wp"/>
                                 </constraints>
@@ -100,16 +100,9 @@
                                 <state key="normal" title="Record">
                                     <color key="titleColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dSl-lq-inw">
-                                <rect key="frame" x="107" y="508" width="200" height="60"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="200" id="5Tq-SL-MUB"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
-                                <state key="normal" title="Save">
-                                    <color key="titleColor" name="AccentColor"/>
-                                </state>
+                                <connections>
+                                    <action selector="recordButtonTapped:" destination="WzJ-xC-Olc" eventType="touchUpInside" id="BVS-56-vaK"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cUH-7L-Wzr">
                                 <rect key="frame" x="107" y="348" width="200" height="60"/>
@@ -120,20 +113,50 @@
                                 <state key="normal" title="Play">
                                     <color key="titleColor" name="AccentColor"/>
                                 </state>
+                                <connections>
+                                    <action selector="playButtonTapped:" destination="WzJ-xC-Olc" eventType="touchUpInside" id="ulF-ak-Ece"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Phrase Name..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="92X-th-7OX">
+                                <rect key="frame" x="30" y="138" width="354" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dSl-lq-inw">
+                                <rect key="frame" x="107" y="458" width="200" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="5Tq-SL-MUB"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                <state key="normal" title="Save">
+                                    <color key="titleColor" name="AccentColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="saveButtonTapped:" destination="WzJ-xC-Olc" eventType="touchUpInside" id="cwc-Hm-6Or"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vQc-Sx-wsp"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="Bsl-GZ-yLC" firstAttribute="top" secondItem="vQc-Sx-wsp" secondAttribute="top" constant="100" id="doz-Ox-LT6"/>
-                            <constraint firstItem="cUH-7L-Wzr" firstAttribute="top" secondItem="Bsl-GZ-yLC" secondAttribute="bottom" constant="100" id="ert-Ea-9qF"/>
-                            <constraint firstItem="dSl-lq-inw" firstAttribute="top" secondItem="cUH-7L-Wzr" secondAttribute="bottom" constant="100" id="fAS-bT-TAh"/>
+                            <constraint firstItem="92X-th-7OX" firstAttribute="top" secondItem="vQc-Sx-wsp" secondAttribute="top" constant="50" id="6hE-Zl-FtQ"/>
+                            <constraint firstItem="vQc-Sx-wsp" firstAttribute="trailing" secondItem="92X-th-7OX" secondAttribute="trailing" constant="30" id="Vy9-JG-Nc2"/>
+                            <constraint firstItem="Bsl-GZ-yLC" firstAttribute="top" secondItem="92X-th-7OX" secondAttribute="top" constant="100" id="doz-Ox-LT6"/>
+                            <constraint firstItem="cUH-7L-Wzr" firstAttribute="top" secondItem="Bsl-GZ-yLC" secondAttribute="bottom" constant="50" id="ert-Ea-9qF"/>
+                            <constraint firstItem="dSl-lq-inw" firstAttribute="top" secondItem="cUH-7L-Wzr" secondAttribute="bottom" constant="50" id="fAS-bT-TAh"/>
                             <constraint firstItem="cUH-7L-Wzr" firstAttribute="centerX" secondItem="vQc-Sx-wsp" secondAttribute="centerX" id="gWM-6M-hQx"/>
                             <constraint firstItem="Bsl-GZ-yLC" firstAttribute="centerX" secondItem="vQc-Sx-wsp" secondAttribute="centerX" id="jQj-tU-GL1"/>
+                            <constraint firstItem="92X-th-7OX" firstAttribute="leading" secondItem="vQc-Sx-wsp" secondAttribute="leading" constant="30" id="oTA-30-8ib"/>
                             <constraint firstItem="dSl-lq-inw" firstAttribute="centerX" secondItem="vQc-Sx-wsp" secondAttribute="centerX" id="q6k-78-PSQ"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="CAe-xr-dsO"/>
+                    <connections>
+                        <outlet property="phraseTextField" destination="92X-th-7OX" id="OuN-yU-K2Q"/>
+                        <outlet property="playButton" destination="cUH-7L-Wzr" id="6X9-vZ-lol"/>
+                        <outlet property="recordButton" destination="Bsl-GZ-yLC" id="3EK-xL-zW8"/>
+                        <outlet property="saveButton" destination="dSl-lq-inw" id="WbF-TY-JcO"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2Zx-fs-HSu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
