@@ -18,6 +18,7 @@
 		5DF9FCB825B3A2480084A456 /* Parrot+CoreDataHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DF9FCB725B3A2480084A456 /* Parrot+CoreDataHelpers.swift */; };
 		D796AA4A25B40F6300B4797D /* DataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D796AA4925B40F6300B4797D /* DataController.swift */; };
 		D796AA5425B4A1F000B4797D /* RecordSoundViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D796AA5325B4A1F000B4797D /* RecordSoundViewController.swift */; };
+		D796AA6125B4B6D200B4797D /* ParrotDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D796AA6025B4B6D200B4797D /* ParrotDetailViewController.swift */; };
 		D7D9086225B3A4E70086CADA /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7D9086125B3A4E70086CADA /* HomeViewController.swift */; };
 		D7D9086C25B3C6460086CADA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D7D9086B25B3C6460086CADA /* Main.storyboard */; };
 		D7D9086F25B3C77E0086CADA /* SoundHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7D9086E25B3C77E0086CADA /* SoundHelper.swift */; };
@@ -37,6 +38,7 @@
 		5DF9FCB725B3A2480084A456 /* Parrot+CoreDataHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Parrot+CoreDataHelpers.swift"; sourceTree = "<group>"; };
 		D796AA4925B40F6300B4797D /* DataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataController.swift; sourceTree = "<group>"; };
 		D796AA5325B4A1F000B4797D /* RecordSoundViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordSoundViewController.swift; sourceTree = "<group>"; };
+		D796AA6025B4B6D200B4797D /* ParrotDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParrotDetailViewController.swift; sourceTree = "<group>"; };
 		D7D9086125B3A4E70086CADA /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		D7D9086B25B3C6460086CADA /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		D7D9086E25B3C77E0086CADA /* SoundHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SoundHelper.swift; path = "Squawkie-Talkie/Helpers/SoundHelper.swift"; sourceTree = SOURCE_ROOT; };
@@ -119,6 +121,7 @@
 				5DF9FC9225B38E110084A456 /* ViewController.swift */,
 				D7D9086125B3A4E70086CADA /* HomeViewController.swift */,
 				D796AA5325B4A1F000B4797D /* RecordSoundViewController.swift */,
+				D796AA6025B4B6D200B4797D /* ParrotDetailViewController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -243,6 +246,7 @@
 				5DF9FC9125B38E110084A456 /* SceneDelegate.swift in Sources */,
 				5DF9FCAF25B3997C0084A456 /* Phrase+CoreDataHelpers.swift in Sources */,
 				5DF9FC9925B38E110084A456 /* Squawkie_Talkie.xcdatamodeld in Sources */,
+				D796AA6125B4B6D200B4797D /* ParrotDetailViewController.swift in Sources */,
 				D7D9086225B3A4E70086CADA /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
