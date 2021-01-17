@@ -16,22 +16,22 @@ class HomeViewController: UIViewController {
     
     private let dataController = DataController()
  
-    private lazy var fetchedResultsController: NSFetchedResultsController<Parrot> = {
-        let fetchRequest: NSFetchRequest<Parrot> = Parrot.fetchRequest()
-        fetchRequest.sortDescriptors = [
-            NSSortDescriptor(key: "name", ascending: true)
-        ]
-        let moc = dataController.moc
-        let frc = NSFetchedResultsController(
-            fetchRequest: fetchRequest,
-            managedObjectContext: moc,
-            sectionNameKeyPath: "name",
-            cacheName: nil)
-        frc.delegate = self
-        try? frc.performFetch()
-        return frc
-    }()
-    
+//    private lazy var fetchedResultsController: NSFetchedResultsController<Parrot> = {
+//        let fetchRequest: NSFetchRequest<Parrot> = Parrot.fetchRequest()
+//        fetchRequest.sortDescriptors = [
+//            NSSortDescriptor(key: "name", ascending: true)
+//        ]
+//        let moc = dataController.moc
+//        let frc = NSFetchedResultsController(
+//            fetchRequest: fetchRequest,
+//            managedObjectContext: moc,
+//            sectionNameKeyPath: "name",
+//            cacheName: nil)
+//        frc.delegate = self
+//        try? frc.performFetch()
+//        return frc
+//    }()
+//    
     private var dateFormatter: DateFormatter = {
         let formatter = DateFormatter()
         formatter.timeZone = TimeZone(secondsFromGMT: 0)
@@ -65,14 +65,15 @@ class HomeViewController: UIViewController {
 }
 extension HomeViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return fetchedResultsController.sections?[section].numberOfObjects ?? 0
+//        return fetchedResultsController.sections?[section].numberOfObjects ?? 0
+        return 1
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = newsTableView.dequeueReusableCell(withIdentifier: "ParrotNames", for: indexPath)
-        let parrots = fetchedResultsController.object(at: indexPath)
+//        let parrots = fetchedResultsController.object(at: indexPath)
 //        let date = dateFormatter.string(from: parrots.hatchDate ?? Date(timeIntervalSince1970: 00.0))
-        cell.textLabel?.text = parrots.name
+//        cell.textLabel?.text = parrots.name
 //        cell.detailTextLabel?.text = date
         
         return cell

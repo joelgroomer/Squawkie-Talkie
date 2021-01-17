@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="4RW-Wy-5m4">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
@@ -40,7 +40,7 @@
                     <navigationItem key="navigationItem" title="Phrases" id="vSf-Dx-pcE">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="Gkn-2y-cXk">
                             <connections>
-                                <segue destination="WzJ-xC-Olc" kind="showDetail" id="0qw-gs-0wY"/>
+                                <segue destination="WzJ-xC-Olc" kind="show" identifier="ToRecord" id="0qw-gs-0wY"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -88,11 +88,11 @@
             <objects>
                 <viewController id="WzJ-xC-Olc" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="2YE-xX-jaO">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bsl-GZ-yLC">
-                                <rect key="frame" x="107" y="250" width="200" height="60"/>
+                                <rect key="frame" x="107" y="188" width="200" height="60"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="200" id="5RX-6k-9Wp"/>
                                 </constraints>
@@ -102,7 +102,7 @@
                                 </state>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dSl-lq-inw">
-                                <rect key="frame" x="107" y="570" width="200" height="60"/>
+                                <rect key="frame" x="107" y="508" width="200" height="60"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="200" id="5Tq-SL-MUB"/>
                                 </constraints>
@@ -112,7 +112,7 @@
                                 </state>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cUH-7L-Wzr">
-                                <rect key="frame" x="107" y="410" width="200" height="60"/>
+                                <rect key="frame" x="107" y="348" width="200" height="60"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="200" id="PUb-iu-qND"/>
                                 </constraints>
@@ -125,7 +125,7 @@
                         <viewLayoutGuide key="safeArea" id="vQc-Sx-wsp"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="Bsl-GZ-yLC" firstAttribute="top" secondItem="vQc-Sx-wsp" secondAttribute="top" constant="250" id="doz-Ox-LT6"/>
+                            <constraint firstItem="Bsl-GZ-yLC" firstAttribute="top" secondItem="vQc-Sx-wsp" secondAttribute="top" constant="100" id="doz-Ox-LT6"/>
                             <constraint firstItem="cUH-7L-Wzr" firstAttribute="top" secondItem="Bsl-GZ-yLC" secondAttribute="bottom" constant="100" id="ert-Ea-9qF"/>
                             <constraint firstItem="dSl-lq-inw" firstAttribute="top" secondItem="cUH-7L-Wzr" secondAttribute="bottom" constant="100" id="fAS-bT-TAh"/>
                             <constraint firstItem="cUH-7L-Wzr" firstAttribute="centerX" secondItem="vQc-Sx-wsp" secondAttribute="centerX" id="gWM-6M-hQx"/>
@@ -133,6 +133,7 @@
                             <constraint firstItem="dSl-lq-inw" firstAttribute="centerX" secondItem="vQc-Sx-wsp" secondAttribute="centerX" id="q6k-78-PSQ"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="CAe-xr-dsO"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2Zx-fs-HSu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
