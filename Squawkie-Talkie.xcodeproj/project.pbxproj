@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		5DB6082525B3C411005CFEF7 /* Phrases.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5DB6082425B3C411005CFEF7 /* Phrases.storyboard */; };
+		5DB6082B25B3F1F5005CFEF7 /* PhrasesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DB6082A25B3F1F5005CFEF7 /* PhrasesViewController.swift */; };
+		5DB6082E25B3F9FB005CFEF7 /* PhraseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DB6082D25B3F9FB005CFEF7 /* PhraseTableViewCell.swift */; };
 		5DF9FC8F25B38E110084A456 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DF9FC8E25B38E110084A456 /* AppDelegate.swift */; };
 		5DF9FC9125B38E110084A456 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DF9FC9025B38E110084A456 /* SceneDelegate.swift */; };
 		5DF9FC9325B38E110084A456 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DF9FC9225B38E110084A456 /* ViewController.swift */; };
@@ -25,6 +27,8 @@
 
 /* Begin PBXFileReference section */
 		5DB6082425B3C411005CFEF7 /* Phrases.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Phrases.storyboard; sourceTree = "<group>"; };
+		5DB6082A25B3F1F5005CFEF7 /* PhrasesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhrasesViewController.swift; sourceTree = "<group>"; };
+		5DB6082D25B3F9FB005CFEF7 /* PhraseTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhraseTableViewCell.swift; sourceTree = "<group>"; };
 		5DF9FC8B25B38E110084A456 /* Squawkie-Talkie.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Squawkie-Talkie.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5DF9FC8E25B38E110084A456 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5DF9FC9025B38E110084A456 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -109,6 +113,7 @@
 		5DF9FCA825B38E480084A456 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				5DB6082D25B3F9FB005CFEF7 /* PhraseTableViewCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -118,6 +123,7 @@
 			children = (
 				5DF9FC9225B38E110084A456 /* ViewController.swift */,
 				D7D9086125B3A4E70086CADA /* HomeViewController.swift */,
+				5DB6082A25B3F1F5005CFEF7 /* PhrasesViewController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -235,6 +241,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5DB6082B25B3F1F5005CFEF7 /* PhrasesViewController.swift in Sources */,
 				5DF9FCB825B3A2480084A456 /* Parrot+CoreDataHelpers.swift in Sources */,
 				D7D9086F25B3C77E0086CADA /* SoundHelper.swift in Sources */,
 				5DF9FC9325B38E110084A456 /* ViewController.swift in Sources */,
@@ -243,6 +250,7 @@
 				D796AA4A25B40F6300B4797D /* DataController.swift in Sources */,
 				5DF9FC9125B38E110084A456 /* SceneDelegate.swift in Sources */,
 				5DF9FCAF25B3997C0084A456 /* Phrase+CoreDataHelpers.swift in Sources */,
+				5DB6082E25B3F9FB005CFEF7 /* PhraseTableViewCell.swift in Sources */,
 				5DF9FC9925B38E110084A456 /* Squawkie_Talkie.xcdatamodeld in Sources */,
 				D7D9086225B3A4E70086CADA /* HomeViewController.swift in Sources */,
 			);
