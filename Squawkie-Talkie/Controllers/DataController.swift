@@ -59,14 +59,21 @@ class DataController {
         try viewContext.save()
     }
     
-    func save() {
+    func save(completion: (() -> Void)?) {
         if container.viewContext.hasChanges {
             try? container.viewContext.save()
         }
+        
+        if let completion = completion {
+            completion()
+        }
     }
     
-    func delete(_ object: NSManagedObject) {
+    func delete(_ object: NSManagedObject, completion: (() -> Void)?) {
         container.viewContext.delete(object)
+        if let completion = completion {
+            completion()
+        }
     }
     
     func deleteAll() {

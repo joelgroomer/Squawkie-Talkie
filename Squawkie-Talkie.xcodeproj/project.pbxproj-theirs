@@ -10,42 +10,36 @@
 		5DB6082525B3C411005CFEF7 /* Phrases.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5DB6082425B3C411005CFEF7 /* Phrases.storyboard */; };
 		5DB6082B25B3F1F5005CFEF7 /* PhrasesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DB6082A25B3F1F5005CFEF7 /* PhrasesViewController.swift */; };
 		5DB6082E25B3F9FB005CFEF7 /* PhraseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DB6082D25B3F9FB005CFEF7 /* PhraseTableViewCell.swift */; };
-		5DC7220225B40AF1009F387F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5DC7220125B40AF1009F387F /* Main.storyboard */; };
 		5DF9FC8F25B38E110084A456 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DF9FC8E25B38E110084A456 /* AppDelegate.swift */; };
 		5DF9FC9125B38E110084A456 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DF9FC9025B38E110084A456 /* SceneDelegate.swift */; };
 		5DF9FC9325B38E110084A456 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DF9FC9225B38E110084A456 /* ViewController.swift */; };
+		5DF9FC9625B38E110084A456 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5DF9FC9425B38E110084A456 /* Main.storyboard */; };
 		5DF9FC9925B38E110084A456 /* Squawkie_Talkie.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 5DF9FC9725B38E110084A456 /* Squawkie_Talkie.xcdatamodeld */; };
 		5DF9FC9B25B38E140084A456 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5DF9FC9A25B38E140084A456 /* Assets.xcassets */; };
 		5DF9FC9E25B38E140084A456 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5DF9FC9C25B38E140084A456 /* LaunchScreen.storyboard */; };
 		5DF9FCAF25B3997C0084A456 /* Phrase+CoreDataHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DF9FCAE25B3997C0084A456 /* Phrase+CoreDataHelpers.swift */; };
 		5DF9FCB225B39CF30084A456 /* LearnedPhrase+CoreDataHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DF9FCB125B39CF30084A456 /* LearnedPhrase+CoreDataHelpers.swift */; };
+		5DF9FCB525B39E1F0084A456 /* DataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DF9FCB425B39E1F0084A456 /* DataController.swift */; };
 		5DF9FCB825B3A2480084A456 /* Parrot+CoreDataHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DF9FCB725B3A2480084A456 /* Parrot+CoreDataHelpers.swift */; };
-		D796AA4A25B40F6300B4797D /* DataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D796AA4925B40F6300B4797D /* DataController.swift */; };
-		D7D9086225B3A4E70086CADA /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7D9086125B3A4E70086CADA /* HomeViewController.swift */; };
-		D7D9086C25B3C6460086CADA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D7D9086B25B3C6460086CADA /* Main.storyboard */; };
-		D7D9086F25B3C77E0086CADA /* SoundHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7D9086E25B3C77E0086CADA /* SoundHelper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		5DB6082425B3C411005CFEF7 /* Phrases.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Phrases.storyboard; sourceTree = "<group>"; };
 		5DB6082A25B3F1F5005CFEF7 /* PhrasesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhrasesViewController.swift; sourceTree = "<group>"; };
 		5DB6082D25B3F9FB005CFEF7 /* PhraseTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhraseTableViewCell.swift; sourceTree = "<group>"; };
-		5DC7220125B40AF1009F387F /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		5DF9FC8B25B38E110084A456 /* Squawkie-Talkie.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Squawkie-Talkie.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5DF9FC8E25B38E110084A456 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5DF9FC9025B38E110084A456 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		5DF9FC9225B38E110084A456 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		5DF9FC9525B38E110084A456 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		5DF9FC9825B38E110084A456 /* Squawkie_Talkie.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Squawkie_Talkie.xcdatamodel; sourceTree = "<group>"; };
 		5DF9FC9A25B38E140084A456 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5DF9FC9D25B38E140084A456 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5DF9FC9F25B38E140084A456 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5DF9FCAE25B3997C0084A456 /* Phrase+CoreDataHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Phrase+CoreDataHelpers.swift"; sourceTree = "<group>"; };
 		5DF9FCB125B39CF30084A456 /* LearnedPhrase+CoreDataHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LearnedPhrase+CoreDataHelpers.swift"; sourceTree = "<group>"; };
+		5DF9FCB425B39E1F0084A456 /* DataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataController.swift; sourceTree = "<group>"; };
 		5DF9FCB725B3A2480084A456 /* Parrot+CoreDataHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Parrot+CoreDataHelpers.swift"; sourceTree = "<group>"; };
-		D796AA4925B40F6300B4797D /* DataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataController.swift; sourceTree = "<group>"; };
-		D7D9086125B3A4E70086CADA /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
-		D7D9086B25B3C6460086CADA /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
-		D7D9086E25B3C77E0086CADA /* SoundHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SoundHelper.swift; path = "Squawkie-Talkie/Helpers/SoundHelper.swift"; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,15 +53,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		5DC721FF25B40AA1009F387F /* Recovered References */ = {
-			isa = PBXGroup;
-			children = (
-				D7D9086E25B3C77E0086CADA /* SoundHelper.swift */,
-				D7D9086B25B3C6460086CADA /* Main.storyboard */,
-			);
-			name = "Recovered References";
-			sourceTree = "<group>";
-		};
 		5DF9FC8225B38E110084A456 = {
 			isa = PBXGroup;
 			children = (
@@ -87,14 +72,13 @@
 		5DF9FC8D25B38E110084A456 /* Squawkie-Talkie */ = {
 			isa = PBXGroup;
 			children = (
-				D796AA4825B40F2B00B4797D /* Controllers */,
-				D7D9085C25B3935B0086CADA /* Helpers */,
-				5DF9FCA625B38E2D0084A456 /* Lifecycle */,
 				5DF9FCA725B38E410084A456 /* Model */,
-				5DF9FCAB25B38E7C0084A456 /* Resources */,
-				5DF9FCAC25B38E980084A456 /* Storyboards */,
-				5DF9FCAA25B38E580084A456 /* View Controllers */,
 				5DF9FCA825B38E480084A456 /* Views */,
+				5DF9FCAA25B38E580084A456 /* View Controllers */,
+				5DF9FCA925B38E4F0084A456 /* Controllers */,
+				5DF9FCAC25B38E980084A456 /* Storyboards */,
+				5DF9FCA625B38E2D0084A456 /* Lifecycle */,
+				5DF9FCAB25B38E7C0084A456 /* Resources */,
 			);
 			path = "Squawkie-Talkie";
 			sourceTree = "<group>";
@@ -128,11 +112,18 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
+		5DF9FCA925B38E4F0084A456 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				5DF9FCB425B39E1F0084A456 /* DataController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
 		5DF9FCAA25B38E580084A456 /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
 				5DF9FC9225B38E110084A456 /* ViewController.swift */,
-				D7D9086125B3A4E70086CADA /* HomeViewController.swift */,
 				5DB6082A25B3F1F5005CFEF7 /* PhrasesViewController.swift */,
 			);
 			path = "View Controllers";
@@ -149,34 +140,11 @@
 		5DF9FCAC25B38E980084A456 /* Storyboards */ = {
 			isa = PBXGroup;
 			children = (
-				5DC7220125B40AF1009F387F /* Main.storyboard */,
 				5DF9FC9C25B38E140084A456 /* LaunchScreen.storyboard */,
+				5DF9FC9425B38E110084A456 /* Main.storyboard */,
 				5DB6082425B3C411005CFEF7 /* Phrases.storyboard */,
 			);
 			path = Storyboards;
-			sourceTree = "<group>";
-		};
-		D796AA4525B40E9E00B4797D /* Recovered References */ = {
-			isa = PBXGroup;
-			children = (
-				D7D9086E25B3C77E0086CADA /* SoundHelper.swift */,
-			);
-			name = "Recovered References";
-			sourceTree = "<group>";
-		};
-		D796AA4825B40F2B00B4797D /* Controllers */ = {
-			isa = PBXGroup;
-			children = (
-				D796AA4925B40F6300B4797D /* DataController.swift */,
-			);
-			path = Controllers;
-			sourceTree = "<group>";
-		};
-		D7D9085C25B3935B0086CADA /* Helpers */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Helpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -236,10 +204,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D7D9086C25B3C6460086CADA /* Main.storyboard in Resources */,
-				5DC7220225B40AF1009F387F /* Main.storyboard in Resources */,
 				5DF9FC9E25B38E140084A456 /* LaunchScreen.storyboard in Resources */,
 				5DF9FC9B25B38E140084A456 /* Assets.xcassets in Resources */,
+				5DF9FC9625B38E110084A456 /* Main.storyboard in Resources */,
 				5DB6082525B3C411005CFEF7 /* Phrases.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -253,22 +220,28 @@
 			files = (
 				5DB6082B25B3F1F5005CFEF7 /* PhrasesViewController.swift in Sources */,
 				5DF9FCB825B3A2480084A456 /* Parrot+CoreDataHelpers.swift in Sources */,
-				D7D9086F25B3C77E0086CADA /* SoundHelper.swift in Sources */,
+				5DF9FCB525B39E1F0084A456 /* DataController.swift in Sources */,
 				5DF9FC9325B38E110084A456 /* ViewController.swift in Sources */,
 				5DF9FCB225B39CF30084A456 /* LearnedPhrase+CoreDataHelpers.swift in Sources */,
 				5DF9FC8F25B38E110084A456 /* AppDelegate.swift in Sources */,
-				D796AA4A25B40F6300B4797D /* DataController.swift in Sources */,
 				5DF9FC9125B38E110084A456 /* SceneDelegate.swift in Sources */,
 				5DF9FCAF25B3997C0084A456 /* Phrase+CoreDataHelpers.swift in Sources */,
 				5DB6082E25B3F9FB005CFEF7 /* PhraseTableViewCell.swift in Sources */,
 				5DF9FC9925B38E110084A456 /* Squawkie_Talkie.xcdatamodeld in Sources */,
-				D7D9086225B3A4E70086CADA /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
+		5DF9FC9425B38E110084A456 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5DF9FC9525B38E110084A456 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
 		5DF9FC9C25B38E140084A456 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
