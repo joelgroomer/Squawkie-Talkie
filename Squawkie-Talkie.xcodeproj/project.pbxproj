@@ -10,6 +10,7 @@
 		5DB6082525B3C411005CFEF7 /* Phrases.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5DB6082425B3C411005CFEF7 /* Phrases.storyboard */; };
 		5DB6082B25B3F1F5005CFEF7 /* PhrasesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DB6082A25B3F1F5005CFEF7 /* PhrasesViewController.swift */; };
 		5DB6082E25B3F9FB005CFEF7 /* PhraseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DB6082D25B3F9FB005CFEF7 /* PhraseTableViewCell.swift */; };
+		5DC7220225B40AF1009F387F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5DC7220125B40AF1009F387F /* Main.storyboard */; };
 		5DF9FC8F25B38E110084A456 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DF9FC8E25B38E110084A456 /* AppDelegate.swift */; };
 		5DF9FC9125B38E110084A456 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DF9FC9025B38E110084A456 /* SceneDelegate.swift */; };
 		5DF9FC9325B38E110084A456 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DF9FC9225B38E110084A456 /* ViewController.swift */; };
@@ -29,6 +30,7 @@
 		5DB6082425B3C411005CFEF7 /* Phrases.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Phrases.storyboard; sourceTree = "<group>"; };
 		5DB6082A25B3F1F5005CFEF7 /* PhrasesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhrasesViewController.swift; sourceTree = "<group>"; };
 		5DB6082D25B3F9FB005CFEF7 /* PhraseTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhraseTableViewCell.swift; sourceTree = "<group>"; };
+		5DC7220125B40AF1009F387F /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		5DF9FC8B25B38E110084A456 /* Squawkie-Talkie.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Squawkie-Talkie.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5DF9FC8E25B38E110084A456 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5DF9FC9025B38E110084A456 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -57,6 +59,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5DC721FF25B40AA1009F387F /* Recovered References */ = {
+			isa = PBXGroup;
+			children = (
+				D7D9086E25B3C77E0086CADA /* SoundHelper.swift */,
+				D7D9086B25B3C6460086CADA /* Main.storyboard */,
+			);
+			name = "Recovered References";
+			sourceTree = "<group>";
+		};
 		5DF9FC8225B38E110084A456 = {
 			isa = PBXGroup;
 			children = (
@@ -139,8 +150,8 @@
 		5DF9FCAC25B38E980084A456 /* Storyboards */ = {
 			isa = PBXGroup;
 			children = (
+				5DC7220125B40AF1009F387F /* Main.storyboard */,
 				5DF9FC9C25B38E140084A456 /* LaunchScreen.storyboard */,
-				5DF9FC9425B38E110084A456 /* Main.storyboard */,
 				5DB6082425B3C411005CFEF7 /* Phrases.storyboard */,
 			);
 			path = Storyboards;
@@ -227,9 +238,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				D7D9086C25B3C6460086CADA /* Main.storyboard in Resources */,
+				5DC7220225B40AF1009F387F /* Main.storyboard in Resources */,
 				5DF9FC9E25B38E140084A456 /* LaunchScreen.storyboard in Resources */,
 				5DF9FC9B25B38E140084A456 /* Assets.xcassets in Resources */,
-				5DF9FC9625B38E110084A456 /* Main.storyboard in Resources */,
 				5DB6082525B3C411005CFEF7 /* Phrases.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
