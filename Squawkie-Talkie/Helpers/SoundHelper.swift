@@ -29,7 +29,3 @@ class AudioPlayerLayer {
     }
     
 }
-<<<<<<< HEAD
-=======
-
->>>>>>> ce2edc54933b2c87142babaa9d7b989aa4b1a143

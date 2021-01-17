@@ -12,7 +12,6 @@ class HomeViewController: UIViewController {
 
     @IBOutlet weak var newsTableView: UITableView!
     @IBOutlet weak var tipsTableView: UITableView!
-<<<<<<< HEAD
 
     
     private let dataController = DataController()
@@ -39,9 +38,6 @@ class HomeViewController: UIViewController {
         formatter.dateFormat = "MMMM dd YYYY"
         return formatter
     }()
-=======
-    
->>>>>>> ce2edc54933b2c87142babaa9d7b989aa4b1a143
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -50,8 +46,6 @@ class HomeViewController: UIViewController {
         tipsTableView.dataSource = self
         tipsTableView.delegate = self
     }
-    
-<<<<<<< HEAD
     @IBAction func sampleDataButtonTapped(_ sender: UIButton) {
         do {
             try dataController.createSampleData()
@@ -61,14 +55,11 @@ class HomeViewController: UIViewController {
         }
     }
 
-=======
->>>>>>> ce2edc54933b2c87142babaa9d7b989aa4b1a143
 //     MARK: - Navigation
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
     }
-<<<<<<< HEAD
 
 }
 extension HomeViewController: UITableViewDataSource, UITableViewDelegate {
@@ -97,7 +88,7 @@ extension HomeViewController: NSFetchedResultsControllerDelegate {
     }
     func controllerDidChangeContent(_ controller: NSFetchedResultsController<NSFetchRequestResult>) {
         newsTableView.endUpdates()
-=======
+
 }
 extension HomeViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -117,19 +108,19 @@ extension HomeViewController: NSFetchedResultsController<NSFetchRequestResult> {
     func controllerDidChangeContent(_ controller: NSFetchedResultsController<NSFetchRequestResult>) {
         newsTableView.endUpdates()
         tipsTableView.endUpdates()
->>>>>>> ce2edc54933b2c87142babaa9d7b989aa4b1a143
+
     }
     func controller(_ controller: NSFetchedResultsController<NSFetchRequestResult>, didChange sectionInfo: NSFetchedResultsSectionInfo, atSectionIndex sectionIndex: Int, for type: NSFetchedResultsChangeType) {
         switch type {
         case .insert:
-<<<<<<< HEAD
+
             newsTableView.insertSections(IndexSet(integer: sectionIndex), with: .automatic)
         case .delete:
             newsTableView.deleteSections(IndexSet(integer: sectionIndex), with: .automatic)
         default: break
         }
     }
-=======
+
             tableView.insertSections(IndexSet(integer: sectionIndex), with: .automatic)
         case .delete:
             tableView.deleteSections(IndexSet(integer: sectionIndex), with: .automatic)
@@ -159,5 +150,5 @@ extension HomeViewController: NSFetchedResultsController<NSFetchRequestResult> {
         @unknown default: break
         }
     }
->>>>>>> ce2edc54933b2c87142babaa9d7b989aa4b1a143
+
 }
