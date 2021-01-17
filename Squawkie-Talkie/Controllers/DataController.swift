@@ -49,5 +49,9 @@ class DataController {
             phrase.active = true
             phrase.text = "Test phrase \(i)"
         }
+        for i in 1...5 {
+            let parrot = Parrot(context: viewContext)
+            parrot.name = "Lovie \(i)"
+        }
     }
 }

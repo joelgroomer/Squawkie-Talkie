@@ -12,26 +12,32 @@ class HomeViewController: UIViewController {
 
     @IBOutlet weak var newsTableView: UITableView!
     @IBOutlet weak var tipsTableView: UITableView!
+
     
-    let parrots: [Parrots]
-    
+    private let dataController = DataController()
+ 
     private lazy var fetchedResultsController: NSFetchedResultsController<Parrot> = {
-        let fetchRequest: NSFetchRequest<Movies> = Movies.fetchRequest()
+        let fetchRequest: NSFetchRequest<Parrot> = Parrot.fetchRequest()
         fetchRequest.sortDescriptors = [
             NSSortDescriptor(key: "name", ascending: true)
         ]
-        let moc = CoreDataStack.shared.mainContext
+        let moc = dataController.moc
         let frc = NSFetchedResultsController(
             fetchRequest: fetchRequest,
             managedObjectContext: moc,
-            sectionNameKeyPath: "hasWatched",
+            sectionNameKeyPath: "name",
             cacheName: nil)
         frc.delegate = self
         try? frc.performFetch()
         return frc
     }()
     
-    
+    private var dateFormatter: DateFormatter = {
+        let formatter = DateFormatter()
+        formatter.timeZone = TimeZone(secondsFromGMT: 0)
+        formatter.dateFormat = "MMMM dd YYYY"
+        return formatter
+    }()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -41,6 +47,14 @@ class HomeViewController: UIViewController {
         tipsTableView.delegate = self
     }
     
+    @IBAction func sampleDataButtonTapped(_ sender: UIButton) {
+        do {
+            try dataController.createSampleData()
+//            try dataController.moc.save()
+        } catch {
+            print("There was an error: \(error)")
+        }
+    }
 
 //     MARK: - Navigation
     
@@ -55,7 +69,13 @@ extension HomeViewController: UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "ParrotNames", for: indexPath)
+        let cell = newsTableView.dequeueReusableCell(withIdentifier: "ParrotNames", for: indexPath)
+        let parrots = fetchedResultsController.object(at: indexPath)
+//        let date = dateFormatter.string(from: parrots.hatchDate ?? Date(timeIntervalSince1970: 00.0))
+        cell.textLabel?.text = parrots.name
+//        cell.detailTextLabel?.text = date
+        
+        return cell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
@@ -66,42 +86,17 @@ extension HomeViewController: UITableViewDataSource, UITableViewDelegate {
 extension HomeViewController: NSFetchedResultsControllerDelegate {
     func controllerWillChangeContent(_ controller: NSFetchedResultsController<NSFetchRequestResult>) {
         newsTableView.beginUpdates()
-        tipsTableView.beginUpdates()
     }
     func controllerDidChangeContent(_ controller: NSFetchedResultsController<NSFetchRequestResult>) {
         newsTableView.endUpdates()
-        tipsTableView.endUpdates()
     }
     func controller(_ controller: NSFetchedResultsController<NSFetchRequestResult>, didChange sectionInfo: NSFetchedResultsSectionInfo, atSectionIndex sectionIndex: Int, for type: NSFetchedResultsChangeType) {
         switch type {
         case .insert:
-            tipsTableView.insertSections(IndexSet(integer: sectionIndex), with: .automatic)
+            newsTableView.insertSections(IndexSet(integer: sectionIndex), with: .automatic)
         case .delete:
-            tipsTableView.deleteSections(IndexSet(integer: sectionIndex), with: .automatic)
+            newsTableView.deleteSections(IndexSet(integer: sectionIndex), with: .automatic)
         default: break
-        }
-    }
-    func controller(_ controller: NSFetchedResultsController<NSFetchRequestResult>, didChange anObject: Any, at indexPath: IndexPath?, for type: NSFetchedResultsChangeType, newIndexPath: IndexPath?) {
-        switch type {
-        case .insert:
-            guard let newIndexPath = newIndexPath else { return }
-            tipsTableView.insertRows(at: [newIndexPath], with: .automatic)
-            newsTableView.insertRows(at: [newIndexPath], with: .automatic)
-        case .update:
-            guard let indexPath = indexPath else { return }
-            tipsTableView.reloadRows(at: [indexPath], with: .automatic)
-            newsTableView.reloadRows(at: [indexPath], with: .automatic)
-        case .move:
-            guard let oldIndexpath = indexPath, let newIndexPath = newIndexPath else { return }
-            tipsTableView.deleteRows(at: [oldIndexpath], with: .automatic)
-            newsTableView.deleteRows(at: [oldIndexpath], with: .automatic)
-            tipsTableView.insertRows(at: [newIndexPath], with: .automatic)
-            newsTableView.insertRows(at: [newIndexPath], with: .automatic)
-        case .delete:
-            guard let indexPath = indexPath else { return }
-            tipsTableView.deleteRows(at: [indexPath], with: .automatic)
-            newsTableView.deleteRows(at: [indexPath], with: .automatic)
-        @unknown default: break
         }
     }
 }

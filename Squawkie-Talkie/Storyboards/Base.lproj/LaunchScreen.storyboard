@@ -17,7 +17,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Squawkie Talkie" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aB5-kW-Gb9">
-                                <rect key="frame" x="77" y="432" width="260.5" height="42"/>
+                                <rect key="frame" x="77" y="419" width="260.5" height="42"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="35"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -33,9 +33,9 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="aB5-kW-Gb9" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="35v-95-wvF"/>
                             <constraint firstItem="CN9-7U-2hr" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="8qR-Em-1XP"/>
                             <constraint firstItem="CN9-7U-2hr" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="75" id="CLO-Hu-sYE"/>
+                            <constraint firstItem="aB5-kW-Gb9" firstAttribute="top" secondItem="CN9-7U-2hr" secondAttribute="bottom" constant="50" id="NnW-9K-0cI"/>
                             <constraint firstItem="aB5-kW-Gb9" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="Rvv-79-sTz"/>
                         </constraints>
                     </view>
