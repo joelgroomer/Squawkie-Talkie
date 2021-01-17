@@ -13,6 +13,25 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var newsTableView: UITableView!
     @IBOutlet weak var tipsTableView: UITableView!
     
+    let parrots: [Parrots]
+    
+    private lazy var fetchedResultsController: NSFetchedResultsController<Parrot> = {
+        let fetchRequest: NSFetchRequest<Movies> = Movies.fetchRequest()
+        fetchRequest.sortDescriptors = [
+            NSSortDescriptor(key: "name", ascending: true)
+        ]
+        let moc = CoreDataStack.shared.mainContext
+        let frc = NSFetchedResultsController(
+            fetchRequest: fetchRequest,
+            managedObjectContext: moc,
+            sectionNameKeyPath: "hasWatched",
+            cacheName: nil)
+        frc.delegate = self
+        try? frc.performFetch()
+        return frc
+    }()
+    
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,15 +51,19 @@ class HomeViewController: UIViewController {
 }
 extension HomeViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return frc.count
+        return fetchedResultsController.sections?[section].numberOfObjects ?? 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
+        let cell = tableView.dequeueReusableCell(withIdentifier: "ParrotNames", for: indexPath)
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        performSegue(withIdentifier: "toParrot", sender: self)
     }
 }
 
-extension HomeViewController: NSFetchedResultsController<NSFetchRequestResult> {
+extension HomeViewController: NSFetchedResultsControllerDelegate {
     func controllerWillChangeContent(_ controller: NSFetchedResultsController<NSFetchRequestResult>) {
         newsTableView.beginUpdates()
         tipsTableView.beginUpdates()
@@ -52,9 +75,9 @@ extension HomeViewController: NSFetchedResultsController<NSFetchRequestResult> {
     func controller(_ controller: NSFetchedResultsController<NSFetchRequestResult>, didChange sectionInfo: NSFetchedResultsSectionInfo, atSectionIndex sectionIndex: Int, for type: NSFetchedResultsChangeType) {
         switch type {
         case .insert:
-            tableView.insertSections(IndexSet(integer: sectionIndex), with: .automatic)
+            tipsTableView.insertSections(IndexSet(integer: sectionIndex), with: .automatic)
         case .delete:
-            tableView.deleteSections(IndexSet(integer: sectionIndex), with: .automatic)
+            tipsTableView.deleteSections(IndexSet(integer: sectionIndex), with: .automatic)
         default: break
         }
     }
