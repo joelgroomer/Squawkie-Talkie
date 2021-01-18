@@ -38,6 +38,13 @@ class PhrasesViewController: UIViewController {
         tableView.dataSource = self
     }
     
+    func updateViews() {
+        btnsDayOfWeek.forEach { btn in
+            // highlighted buttons appear "off", so if the value is true,
+            // we don't want them highlighted
+            btn.isHighlighted = !PlaybackController.shared.activeDays[btn.tag]
+        }
+    }
     
     /*
      // MARK: - Navigation
@@ -50,13 +57,19 @@ class PhrasesViewController: UIViewController {
      */
     
     // MARK: - Actions
-    @IBAction func addBtnTapped(_ sender: Any) {
-    }
     
     @IBAction func timeUpdated(_ sender: UIDatePicker) {
+        if sender.tag == 0 {
+            PlaybackController.shared.updateStartTime(to: sender.date)
+        } else if sender.tag == 1 {
+            PlaybackController.shared.updateEndTime(to: sender.date)
+        }
     }
     
     @IBAction func dayOfWeekBtnTapped(_ sender: UIButton) {
+        guard let day = DayOfWeek(rawValue: sender.tag) else { return }
+        PlaybackController.shared.toggleActiveDays(day: day)
+        updateViews()
     }
     
     // MARK: - PhraseTableViewCell delegate

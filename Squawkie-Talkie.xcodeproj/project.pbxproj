@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5DA02C2925B4AA0F00E614BC /* PlaybackController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DA02C2825B4AA0F00E614BC /* PlaybackController.swift */; };
 		5DB6082525B3C411005CFEF7 /* Phrases.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5DB6082425B3C411005CFEF7 /* Phrases.storyboard */; };
 		5DB6082B25B3F1F5005CFEF7 /* PhrasesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DB6082A25B3F1F5005CFEF7 /* PhrasesViewController.swift */; };
 		5DB6082E25B3F9FB005CFEF7 /* PhraseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DB6082D25B3F9FB005CFEF7 /* PhraseTableViewCell.swift */; };
@@ -30,6 +31,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5DA02C2825B4AA0F00E614BC /* PlaybackController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaybackController.swift; sourceTree = "<group>"; };
 		5DB6082425B3C411005CFEF7 /* Phrases.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Phrases.storyboard; sourceTree = "<group>"; };
 		5DB6082A25B3F1F5005CFEF7 /* PhrasesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhrasesViewController.swift; sourceTree = "<group>"; };
 		5DB6082D25B3F9FB005CFEF7 /* PhraseTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhraseTableViewCell.swift; sourceTree = "<group>"; };
@@ -145,6 +147,7 @@
 				D796AA5325B4A1F000B4797D /* RecordSoundViewController.swift */,
 				D796AA6025B4B6D200B4797D /* ParrotDetailViewController.swift */,
 				D7F604E125B5295D006A4902 /* MyFlockCollectionViewController.swift */,
+
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -167,10 +170,18 @@
 			path = Storyboards;
 			sourceTree = "<group>";
 		};
+		D796AA4525B40E9E00B4797D /* Recovered References */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "Recovered References";
+			sourceTree = "<group>";
+		};
 		D796AA4825B40F2B00B4797D /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
 				D796AA4925B40F6300B4797D /* DataController.swift */,
+				5DA02C2825B4AA0F00E614BC /* PlaybackController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -264,6 +275,7 @@
 				D7F604E225B5295D006A4902 /* MyFlockCollectionViewController.swift in Sources */,
 				5DF9FC8F25B38E110084A456 /* AppDelegate.swift in Sources */,
 				D796AA4A25B40F6300B4797D /* DataController.swift in Sources */,
+				5DA02C2925B4AA0F00E614BC /* PlaybackController.swift in Sources */,
 				5DF9FC9125B38E110084A456 /* SceneDelegate.swift in Sources */,
 				5DF9FCAF25B3997C0084A456 /* Phrase+CoreDataHelpers.swift in Sources */,
 				5DB6082E25B3F9FB005CFEF7 /* PhraseTableViewCell.swift in Sources */,
