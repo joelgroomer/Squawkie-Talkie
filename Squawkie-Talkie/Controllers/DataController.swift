@@ -48,6 +48,7 @@ class DataController {
             let phrase = Phrase(context: viewContext)
             phrase.active = true
             phrase.text = "Test phrase \(i)"
+            phrase.url = URL(fileURLWithPath: "https://www.google.com")
         }
         
         for i in 1...5 {
