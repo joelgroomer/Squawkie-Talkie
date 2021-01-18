@@ -25,6 +25,8 @@
 		D796AA6125B4B6D200B4797D /* ParrotDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D796AA6025B4B6D200B4797D /* ParrotDetailViewController.swift */; };
 		D7D9086225B3A4E70086CADA /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7D9086125B3A4E70086CADA /* HomeViewController.swift */; };
 		D7D9086F25B3C77E0086CADA /* SoundHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7D9086E25B3C77E0086CADA /* SoundHelper.swift */; };
+		D7F604E225B5295D006A4902 /* MyFlockCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7F604E125B5295D006A4902 /* MyFlockCollectionViewController.swift */; };
+		D7F604E525B5296F006A4902 /* MyFlockCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7F604E425B5296F006A4902 /* MyFlockCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -49,6 +51,8 @@
 		D7D9086125B3A4E70086CADA /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		D7D9086B25B3C6460086CADA /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		D7D9086E25B3C77E0086CADA /* SoundHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SoundHelper.swift; path = "Squawkie-Talkie/Helpers/SoundHelper.swift"; sourceTree = SOURCE_ROOT; };
+		D7F604E125B5295D006A4902 /* MyFlockCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyFlockCollectionViewController.swift; sourceTree = "<group>"; };
+		D7F604E425B5296F006A4902 /* MyFlockCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyFlockCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -127,6 +131,7 @@
 			isa = PBXGroup;
 			children = (
 				5DB6082D25B3F9FB005CFEF7 /* PhraseTableViewCell.swift */,
+				D7F604E425B5296F006A4902 /* MyFlockCollectionViewCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -139,6 +144,7 @@
 				5DB6082A25B3F1F5005CFEF7 /* PhrasesViewController.swift */,
 				D796AA5325B4A1F000B4797D /* RecordSoundViewController.swift */,
 				D796AA6025B4B6D200B4797D /* ParrotDetailViewController.swift */,
+				D7F604E125B5295D006A4902 /* MyFlockCollectionViewController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -254,6 +260,8 @@
 				D7D9086F25B3C77E0086CADA /* SoundHelper.swift in Sources */,
 				5DF9FC9325B38E110084A456 /* ViewController.swift in Sources */,
 				5DF9FCB225B39CF30084A456 /* LearnedPhrase+CoreDataHelpers.swift in Sources */,
+				D7F604E525B5296F006A4902 /* MyFlockCollectionViewCell.swift in Sources */,
+				D7F604E225B5295D006A4902 /* MyFlockCollectionViewController.swift in Sources */,
 				5DF9FC8F25B38E110084A456 /* AppDelegate.swift in Sources */,
 				D796AA4A25B40F6300B4797D /* DataController.swift in Sources */,
 				5DF9FC9125B38E110084A456 /* SceneDelegate.swift in Sources */,
