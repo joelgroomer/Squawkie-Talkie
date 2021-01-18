@@ -55,6 +55,7 @@ class DataController {
             let parrot = Parrot(context: viewContext)
             parrot.breed = "Test breed"
             parrot.name = "Test parrot \(i)"
+            parrot.image = URL(string: "http://animalia-life.com/data_images/parrot/parrot6.jpg")
         }
         
         try viewContext.save()

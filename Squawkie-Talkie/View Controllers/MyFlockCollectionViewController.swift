@@ -4,16 +4,30 @@
 //
 //  Created by Joe on 1/17/21.
 //
-
+import CoreData
 import UIKit
 
 private let reuseIdentifier = "MyFlockCell"
 
-class MyFlockCollectionViewController: UICollectionViewController {
+class MyFlockCollectionViewController: UICollectionViewController, NSFetchedResultsControllerDelegate {
     
     let dataController = DataController()
     
-    var parrots: [Parrot] = []
+    private lazy var fetchedResultsController: NSFetchedResultsController<Parrot> = {
+        let fetchRequest: NSFetchRequest<Parrot> = Parrot.fetchRequest()
+        fetchRequest.sortDescriptors = [
+            NSSortDescriptor(key: "name", ascending: true)
+        ]
+        let moc = dataController.moc
+        let frc = NSFetchedResultsController(
+            fetchRequest: fetchRequest,
+            managedObjectContext: moc,
+            sectionNameKeyPath: "name",
+            cacheName: nil)
+        frc.delegate = self
+        try? frc.performFetch()
+        return frc
+    }()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,7 +47,7 @@ class MyFlockCollectionViewController: UICollectionViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "ToDetail" {
             if let indexPath = sender as? IndexPath, let vc = segue.destination as? ParrotDetailViewController {
-                vc.parrot = parrots[indexPath.row]
+                vc.parrot = fetchedResultsController.object(at: indexPath)
             }
         }
     }
@@ -41,21 +55,16 @@ class MyFlockCollectionViewController: UICollectionViewController {
 
     // MARK: UICollectionViewDataSource
 
-//    override func numberOfSections(in collectionView: UICollectionView) -> Int {
-//        // #warning Incomplete implementation, return the number of sections
-//        return 0
-//    }
-
-
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return parrots.count
+        return fetchedResultsController.sections?[section].numberOfObjects ?? 0
     }
-
+    // FIXME: Getting an error stating there's no reuseIdentifier
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath)
-    
-        // Configure the cell
-    
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier,
+                                                            for: indexPath) as? MyFlockCollectionViewCell else { return UICollectionViewCell() }
+        let parrots = fetchedResultsController.object(at: indexPath)
+        cell.parrot = parrots
+        
         return cell
     }
 

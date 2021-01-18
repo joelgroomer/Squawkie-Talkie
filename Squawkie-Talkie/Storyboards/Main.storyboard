@@ -67,10 +67,10 @@
             </objects>
             <point key="canvasLocation" x="-771" y="1008"/>
         </scene>
-        <!--Collection View Controller-->
+        <!--My Flock Collection View Controller-->
         <scene sceneID="Lh1-Mq-lQi">
             <objects>
-                <collectionViewController id="DVJ-aw-POD" sceneMemberID="viewController">
+                <collectionViewController id="DVJ-aw-POD" customClass="MyFlockCollectionViewController" customModule="Squawkie_Talkie" customModuleProvider="target" sceneMemberID="viewController">
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="0WK-yz-4eb">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -82,7 +82,7 @@
                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                         </collectionViewFlowLayout>
                         <cells>
-                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="MyFlockCell" id="38I-Kb-9PD">
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="MyFlockCell" id="38I-Kb-9PD" customClass="MyFlockCollectionViewCell" customModule="Squawkie_Talkie" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="0.0" width="172" height="172"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="NWs-af-csg">
@@ -111,6 +111,10 @@
                                         <constraint firstItem="H5Q-AR-uLm" firstAttribute="leading" secondItem="NWs-af-csg" secondAttribute="leading" id="vCW-PL-HC1"/>
                                     </constraints>
                                 </collectionViewCellContentView>
+                                <connections>
+                                    <outlet property="parrotImageView" destination="H5Q-AR-uLm" id="Ckc-55-QAL"/>
+                                    <outlet property="parrotNameLabel" destination="5Vt-2p-GhE" id="EhD-am-hdZ"/>
+                                </connections>
                             </collectionViewCell>
                         </cells>
                         <connections>
@@ -386,7 +390,7 @@
                                 <rect key="frame" x="0.0" y="468" width="390" height="274"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Tips" textLabel="te6-Lw-T0u" detailTextLabel="moM-xl-4Bo" style="IBUITableViewCellStyleValue1" id="mVJ-qp-b6A">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Phrases" textLabel="te6-Lw-T0u" detailTextLabel="moM-xl-4Bo" style="IBUITableViewCellStyleValue1" id="mVJ-qp-b6A">
                                         <rect key="frame" x="0.0" y="28" width="390" height="43.666667938232422"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="mVJ-qp-b6A" id="Hld-TR-mvS">
