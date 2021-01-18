@@ -47,13 +47,13 @@ class ParrotDetailViewController: UIViewController {
 
 extension ParrotDetailViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return parrot?.phrasesLearned.count ?? 0
+        return parrot?.phrasesLearned?.count ?? 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "PhrasesCell", for: indexPath)
         if let parrot = parrot {
-            cell.textLabel.text = parrot.name
+            cell.textLabel?.text = parrot.name
         }
         return cell
     }

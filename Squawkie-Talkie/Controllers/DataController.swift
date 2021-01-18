@@ -48,12 +48,14 @@ class DataController {
             let phrase = Phrase(context: viewContext)
             phrase.active = true
             phrase.text = "Test phrase \(i)"
+            phrase.url = URL(fileURLWithPath: "https://www.google.com")
         }
         
         for i in 1...5 {
             let parrot = Parrot(context: viewContext)
             parrot.breed = "Test breed"
             parrot.name = "Test parrot \(i)"
+            parrot.image = URL(string: "http://animalia-life.com/data_images/parrot/parrot6.jpg")
         }
         
         try viewContext.save()
